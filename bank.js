@@ -1,6 +1,6 @@
 /*    let limit;
 limit = 10000
-for (let i=0; i==limit; i++) {
+for (let i=0; i==limit; i++) {        
     if(i=limit){
         console.log('Вы достигли лимита')
     }
@@ -8,14 +8,14 @@ for (let i=0; i==limit; i++) {
 alert( Вывести + " ") 
 */
 
-function CloseCardLimit() {
+function Ccl() {
    let closelimit= 0;
-   for(let Debt= 110000; Debt<110000;  ); {
-    if (Debt=11000){   
+   for(let i = 110000; Debt == i;  ); {
+    if (Debt=110000){   
     let pay = 20000;
        let percent = 50;
-        let Mpay = pay / 100 * percent  
-        let closeDebt = Debt-Mpay
+        let Mpay = pay + (pay / 100 * percent)  
+        var closeDebt = Debt-Mpay
         }
         if(closelimit=closeDebt){
             console.log('лимит закрыт ')
