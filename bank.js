@@ -31,20 +31,18 @@ function Ccl(limit, percent, change) {
     while( debt > 0) {
         let mp= debt*(percent/(100*12));
         console.log('начисленные проценты' , mp )
+        let mr = debt*(50/100)+mp;
+        console.log('пополнение' ,mr)
+         debt = debt - mr;//ВРЕМЕННО // Улетает в стратосферу
         
-        let mr= mp+debt*(50/100);
-        
-        debt = debt - 1000;//ВРЕМЕННО
-
          if(debt==0){
              console.log('лимит закрыт: ', debt)
          }else{
              console.log('лимит не закрыт: ', debt)
-            
-         }
+            } 
 
          time++;
      }
  //alert (Ввести + '  ')
  }
-Ccl(100000, 24, 0);
+Ccl(40000, 24, 0);
