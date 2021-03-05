@@ -21,25 +21,30 @@ x = 40000 лимит исчерпан
   x=40000
   i=Mpay= платеж +процент
   b= закрытие долга= x-i
-
+let mr= mp+debt*(50/100);
 */
 
 function Ccl(limit, percent, change) {
      //вычислить ежемесячный процент
-    let dept = limit;
+    let debt = limit;
     let time = 1;
-    while( dept > 0) {
-        let mp= debt*(percent/100);
+    while( debt > 0) {
+        let mp= debt*(percent/(100*12));
+        console.log('начисленные проценты' , mp )
+        
         let mr= mp+debt*(50/100);
-         if(dept=0){
-             console.log('лимит закрыт ')
+        
+        debt = debt - 1000;//ВРЕМЕННО
+
+         if(debt==0){
+             console.log('лимит закрыт: ', debt)
          }else{
-             console.log('лимит не закрыт')
-             return 
+             console.log('лимит не закрыт: ', debt)
+            
          }
 
          time++;
      }
  //alert (Ввести + '  ')
  }
-Ccl(40000, 24, 0);
+Ccl(100000, 24, 0);
