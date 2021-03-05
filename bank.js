@@ -8,9 +8,12 @@ for (let i=0; i==limit; i++) {
 alert( Вывести + " ") 
 */
 /* ежемесячный платеж
-let pay = 20000;
-        let percent = 50;
-         let Mpay = pay + (pay / 100 * percent)
+ if (Debt==40000); {   
+            let pay = 20000;
+            let percent = 50;
+            let Mpay = pay + (pay / 100 * percent)  
+            let closelimit = Debt-Mpay
+         }
 
 закрытие лимита 
 x = 40000 лимит исчерпан 
@@ -22,20 +25,17 @@ x = 40000 лимит исчерпан
 */
 
 function Ccl(limit, percent, change) {
-    let mp;//вычислить ежемесячный процент
+     //вычислить ежемесячный процент
     let dept = limit;
     let time = 1;
     while( dept > 0) {
-        if (Debt==40000); {   
-            let pay = 20000;
-            let percent = 50;
-            let Mpay = pay + (pay / 100 * percent)  
-            let closelimit = Debt-Mpay
-         }
-         if(closelimit==Debt){
+        let mp= debt*(percent/100);
+        let mr= mp+debt*(50/100);
+         if(dept=0){
              console.log('лимит закрыт ')
          }else{
              console.log('лимит не закрыт')
+             return 
          }
 
          time++;
