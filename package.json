@@ -1,0 +1,23 @@
+{
+  "name": "packege.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/parcel-bundler/bin/cli.js index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HEBi744/Lab2_pink.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HEBi744/Lab2_pink/issues"
+  },
+  "homepage": "https://github.com/HEBi744/Lab2_pink#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
