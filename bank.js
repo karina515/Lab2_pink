@@ -1,5 +1,6 @@
 /*    let limit;
 limit = 10000
+float_num.toFixed(2);
 for (let i=0; i==limit; i++) {        
     if(i=limit){
         console.log('Вы достигли лимита')
@@ -24,21 +25,26 @@ x = 40000 лимит исчерпан
 let mr= mp+debt*(50/100);
 */
 
+
 function Ccl(limit, percent, change) {
      //вычислить ежемесячный процент
     let debt = limit;
     let time = 1;
     while( debt > 0) {
+
         let mp= debt*(percent/(100*12));
-        console.log('начисленные проценты' , mp )
-        let mr = debt*(50/100)+mp;
-        console.log('пополнение' ,mr)
-         debt = debt - mr;//ВРЕМЕННО // Улетает в стратосферу
         
+        console.log('начисленные проценты' , mp.toFixed() )
+        let mr = mp*2;
+        if(mr < 500) {
+        mr=500}
+        
+        console.log('пополнение' ,mr.toFixed())
+         debt = debt - mr;
          if(debt==0){
-             console.log('лимит закрыт: ', debt)
+             console.log('лимит закрыт: ', debt.toFixed())
          }else{
-             console.log('лимит не закрыт: ', debt)
+             console.log('лимит не закрыт: ', debt.toFixed())
             } 
 
          time++;
